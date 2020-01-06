@@ -1,0 +1,318 @@
+/*Hojas de estilos en cascada,predomina el cambio que esta más abajo*/
+html {
+    box-sizing: border-box;/*snipet para padding,sirve para que cuando aplicamos un width a un elemento con padding no se sumen las dimensiones*/
+    font-size: 62.5%;
+    /* Reset para REMS 62.5% =10px de 16px,entonces 1rem serán 10ppx ,los rem son mejor escalables en dispositivos mó viles*/
+
+}
+*, *:before, *:after {
+    box-sizing: inherit;/*snipet para padding*/
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+
+}
+
+/*GLOBALES (se reutilizan multiples veces)*/
+.contenedor {
+    
+    max-width: 120rem; /** toma todo el espacio que tengas disponible siempre y cuando no te pases de 120rem= 1200px; **/
+    margin: 0 auto;
+    /*arriba derecha abajo izquierda --sentido horario*/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*Utilidades*/
+.seccion{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+.d-block{
+    display:block!important;/* hace que se aplique y sin importar que despues se modifique*/
+}
+
+/*BOTONES*/
+.boton{
+    color:white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding:  1rem 3rem;
+    margin-top: 3rem; 
+    display: inline-block;/*Le podes aplicar margin a diferencia de inline que viene por default para los enlaces(e imagenes), y es diferente de block por que no toma todo el espacio disponible*/
+     text-align: center;
+}
+
+.boton-amarillo{
+    background-color:#E0B709; 
+}
+.boton-verde{
+    background-color:#71B100; 
+}
+
+/*HEADER*/
+/*Dandole estilo a dos clases a la misma vez*/
+.site-header.inicio {
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    /* mostrar la imagen desde el centro */
+    background-size: cover;
+    /*forza a que la imagen tome todo el espacio disponible tanto en ancho como en alto,conservando las proporciones*/
+
+    height: 100vh;
+    /*viewport height  % de la altura de la pantalla, en este caso el 100% de la altura de la pantalla*/
+    min-height: 60rem;
+    /*Como mínimo la altura del header será de 600px , esto es para el caso de que achiquemos la pantalla*/
+}
+
+.contenido-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    /*alinear elementos horizontalment*/
+    align-items: center;
+    /*centrar elementos verticalmente*/
+    padding-top: 3rem;
+        /*30px*/
+}
+
+.navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.8rem;
+    margin-right: 2rem;
+    /*separacion  de 20px entra cada elemento a la derecha */
+}
+
+/* uso de pseudo selectores*/
+.navegacion a:last-of-type {
+    margin: 0;
+    /*con esto cambiamos el margin right del ultimo elemento de la barra;*/
+
+}
+
+.navegacion a:hover {
+    /* hover al poner el mouse arriba*/
+    color: aquamarine;
+}
+
+/*Iconos nosotros */
+
+.iconos-nosotros{
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc(33.3% - 1rem);
+    /*tomamos el 100% y lo dividimos entre 3 y le restamos 10px(10rem)*/
+    text-align: center;
+
+}
+
+.icono h3 {
+    text-transform: uppercase;
+    /*transformamos los h3 a mayúsculas*/
+}
+
+/*anuncios*/
+.contenedor-anuncios{
+    display:flex;
+    justify-content: space-between;
+      
+}
+
+.anuncio{
+
+   flex-basis:calc(33.3% - 1rem);
+    border:  1px solid #B5B5B5;
+    background-color: #F5F5F5;
+   
+}
+.contenido-anuncio{
+   padding: 2rem;
+}
+.contenido-anuncio h3, .contenido-anuncio p {
+   margin: 0;
+}
+.precio{
+    
+    color: #71B100;
+    font-weight: 700; 
+}
+.iconos-caracteristicas{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content:space-around;
+    
+}
+.iconos-caracteristicas li{
+   
+    display: flex;
+    align-items: center;
+}
+.iconos-caracteristicas li img{
+    margin: 2rem;
+    
+}
+.ver-todas{
+    display: flex;
+    justify-content:flex-end;
+
+    
+}
+.imagen-contacto{
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+    
+}
+.contenido-contacto{
+    flex: 1; /*flex 1 es lo que se conoce como factor de crecimiento detecta cuanto tamañan hay disponible ,detecta cuantos elementos hay ,realiza la division ,como hay un solo elemento ponemos 1 esto le dar el total del box a ese elemento*/
+    color:white;
+    
+}
+.contenido-contacto p{
+    font-size: 1.8rem;
+}
+.seccion-inferior{
+    display: flex;
+    justify-content:space-between;
+    
+}
+.seccion-inferior .blog{
+    flex-basis:60%;/* el box será del 60% del contenedor*/
+   
+}
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem);/*el box será el 40% del contenedor menos 20px*/
+    
+}
+.entrada-blog{
+    display:flex;
+    justify-content: space-between; 
+    margin-bottom: 2rem;
+}
+.entrada-blog:last-of-type{ 
+  
+    margin-bottom: 0;
+}
+.entrada-blog .imagen{
+    flex-basis: 40%;
+    
+} 
+.entrada-blog .texto-entrada{
+   flex-basis: calc(60% - 3rem);
+   
+}
+.texto-entrada h4{
+ 
+    margin: 0;
+    line-height: 1.4;
+   
+}
+.texto-entrada a{
+    text-decoration:none;
+    color: black;
+
+}
+.texto-entrada h4::after{
+    content:'';/*no tienen nada adentro solo será una linea*/
+    display:block;
+    width:15rem;
+    height:.5rem;
+    background-color:#71B100 ;
+    margin-top: 1rem;
+} /*h4::after crear un pseudo elemento despues del h4 no son elemento que no existen no se pueden seleccionar*/ 
+.texto-entrada span{
+    color: #E08709;
+}
+/*testimonial*/
+.testimonial{
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+.testimonial p {
+    text-align: right;
+}
+.testimonial blockquote::before{
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -2rem;
+} 
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+
+}
+/*footer*/
+.site-footer{
+    background-color: #333333;
+    margin: 0;
+}
+.copyright{
+    margin: 0;
+    color: white;
+}
+.contenedor-footer{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
