@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Nosotros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <p>Nosotros</p>
-    <a href="index.html">Volver</a>
+
+    <header class="site-header">
+        <!-- HEADER :informacion del encabezado-->
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de bienes raices">
+                </a>
+                <nav class="navegacion">
+                    <!-- NAVEGACION DENTRO DE HEADER-->
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="Blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                    <a target="_blank" href="http://www.google.com">Ir a google</a>
+                </nav>
+                <!--FIN DE BARRA-->
+            </div><!-- FIN DE CONTENEDOR-->
+        </div>
+    </header><!-- FIN HEADER -->
+    <main class="contenedor">
+        <h1 class="fw-300 centrar-texto">Conoce sobre nosotros</h1><!-- Por documento debe ir un h1-->
+        <div class="contenido-nosotros">
+            <div class="imagen">
+                <img src="img/nosotros.jpg" alt="Imagen Sobre Nosotros">
+
+            </div>
+            <div class="texto-nosotros">
+                <blockquote> 25 años de experiencia</blockquote>
+                <p>
+                    ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nisi accusantium aut neque error sint, vitae sunt ullam, ratione sequi facilis. Dolores placeat, corporis tempora assumenda veritatis beatae quo reiciendis!  consectetur adipisicing elit. Hic deleniti tempore voluptatum praesentium iure veritatis in mollitia totam nihil nemo quo perferendis sapiente excepturi, vero deserunt.
+                </p> 
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat deserunt corporis, ratione recusandae sequi deleniti mollitia magni neque, amet esse necessitatibus accusantium voluptatibus, quidem quisquam consequuntur non! Est, mollitia labore!mollitia corporis quibusdam hic deserunt beatae fugit est nisi eius nihil reiciendis, fuga quaerat iusto cumque, atque, rerum tempora.
+                </p>
+                
+            </div>
+        </div>
+
+    </main>
+    
+    <section class="contenedor seccion">
+        <!--SECTION se usa cuando el primer hijo puede ser un encabezado y tenemos que agrupar contenido relacionado  -->
+
+        <h2 class="centrar-texto fw-300">Más sobre nosotros</h2>
+        <!--comentario -->
+
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <!--DIV  es la etiqueta más genérica ,acáel primer hijo es un header pero como el contenido es relacionado a lo anterior ,no corresponde un section ,si no un div -->
+                <img src="img/icono1.svg" alt="incono seguridad">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit praesentium corporis adipisci ipsam rerum maxime inventore, eveniet quasi! Iste aliquam ipsam modi aut obcaecati commodi adipisci aliquid consequuntur dicta laborios am!</p>
+            </div>
+
+            <div class="icono">
+                <img src="img/icono2.svg" alt:="incono mejor precio">
+                <h3>El Mejor Precio</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit praesentium corporis adipisci ipsam rerum maxime inventore, eveniet quasi! Iste aliquam ipsam modi aut obcaecati commodi adipisci aliquid consequuntur dicta laboriosam!</p>
+            </div>
+
+            <div class="icono">
+                <img src="img/icono3.svg" alt="incono a tiempo">
+
+                <h3>A tiempo</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit praesentium corporis adipisci ipsam rerum maxime inventore, eveniet quasi! Iste aliquam ipsam modi aut obcaecati commodi adipisci aliquid consequuntur dicta laboriosam!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <!-- NAVEGACION DENTRO DE HEADER-->
+                <a href="nosotros.html">Nosotros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="Blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+                <a target="_blank" href="http://www.google.com">Ir a google</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados 2019 &copy;</p>
+        </div>
+    </footer>
+
 </body></html>
