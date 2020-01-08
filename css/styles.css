@@ -70,7 +70,9 @@ img {
     display: block !important;
     /* hace que se aplique y sin importar que despues se modifique*/
 }
-
+.contenido-centrado{
+    max-width: 800px;
+}
 /*BOTONES*/
 .boton {
     color: white;
@@ -217,6 +219,8 @@ img {
     padding: 0;
     display: flex;
     justify-content: space-around;
+    flex: 1;
+    max-width: 500px;
 
 }
 
@@ -376,6 +380,7 @@ img {
 }
 
 /*INTERNAS*/
+/*Nosotros*/
 .contenido-nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -389,4 +394,10 @@ img {
     font-size: 2rem;
     margin: 0;
     padding: 1rem 0 3rem 0;
+}
+/*Anuncios*/
+.resumen-propiedad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
