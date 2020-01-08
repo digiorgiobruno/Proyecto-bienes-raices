@@ -181,14 +181,19 @@ img {
 .contenedor-anuncios {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /*si los elementos ocupan más que el total de la pantalla se apilan de tal forma de que no haya scroll*/
 
 }
 
 .anuncio {
-
-    flex-basis: calc(33.3% - 1rem);
+   /*flex-grow: 0;crece el flexbox si puede*/
+    /*flex-basis: calc(33.3% - 1rem);*/
+    flex: 0 0 calc(33.3% - 1rem);/* primer valor flex grow -segundo para hacer el contenido mas pequeño y el 3ero es el tamaño base*/
+    flex-shrink: 0;/*el flexbox no se encojera*/
+    
     border: 1px solid #B5B5B5;
     background-color: #F5F5F5;
+    margin-bottom: 2rem;
 
 }
 
