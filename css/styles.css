@@ -24,7 +24,8 @@ body {
 
 /*GLOBALES (se reutilizan multiples veces)*/
 .contenedor {
-
+    
+    width: 95%;
     max-width: 120rem;
     /** toma todo el espacio que tengas disponible siempre y cuando no te pases de 120rem= 1200px; **/
     margin: 0 auto;
